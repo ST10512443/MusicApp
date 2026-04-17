@@ -48,6 +48,11 @@ class Song(songName: String, songArtist:String,songYear:Int,songDuration:String)
         return true
     }
 
+//    added function to display song attribute
+    fun DisplaySongs():String{
+        return "$name - $artist - ($duration)"
+    }
+
 
 
 

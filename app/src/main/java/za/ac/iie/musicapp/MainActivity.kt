@@ -1,6 +1,7 @@
 package za.ac.iie.musicapp
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,12 +13,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        var songDisplayTxt = findViewById<TextView>(R.id.SongDisplayId)
+
         //calling song class for a song
         Song("Ordinary","Alex Warren", 2026,"2.5")
         Song("Swim","BTS",2026,"3.5")
         Song("So Easy","Olvia Dean")
 
-        
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
