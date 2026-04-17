@@ -3,6 +3,7 @@ package za.ac.iie.musicapp
 import android.util.Log
 import kotlin.math.log
 
+//created placeholders
 class Song(songName: String, songArtist:String,songYear:Int,songDuration:String) {
 
     //adding variables for name objects attributes
@@ -11,12 +12,16 @@ class Song(songName: String, songArtist:String,songYear:Int,songDuration:String)
     var year : Int = 0
     var duration : String = ""
 
+    //added secondary constructor
+    constructor(songName: String, songArtist:String) : this(songName,songArtist,0,""){
+
+    }
+    //initialising the varaibles/attributes for the song objects
     init{
         name = songName
         artist = songArtist
         year = songYear
         duration = songDuration
-
     }
 
     //function to play the song
