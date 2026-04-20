@@ -16,6 +16,12 @@ class Song(songName: String, songArtist:String,songYear:Int,songDuration:String)
     constructor(songName: String, songArtist:String) : this(songName,songArtist,0,""){
 
     }
+    //added secondary constructor for if user onky knows name and duration no other info
+    //Using int because of conflict error and then toString to convert back to string after
+    constructor(songName: String, songDuration:Int) : this(songName,"",0,songDuration.toString()){
+
+    }
+
     //initialising the varaibles/attributes for the song objects
     init{
         name = songName
@@ -50,7 +56,7 @@ class Song(songName: String, songArtist:String,songYear:Int,songDuration:String)
 
 //    added function to display song attribute
     fun DisplaySongs():String{
-        return "$name - $artist - ($duration)"
+        return "$name - $artist -$year - ($duration)"
     }
 
 
